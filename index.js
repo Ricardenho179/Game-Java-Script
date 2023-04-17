@@ -331,6 +331,7 @@ function updateGameArea() {
     area.update();
   }
 }
+
 //CIMA
 function moveupBlackPiece() {
   myGamePiece.speedY -= 1;
