@@ -46,12 +46,14 @@ function componentAutomatic(width, height, color, x, y, type) {
       } 
   }
   this.newPosBlue = function() {
-    this.angle += this.moveAngle * Math.PI / 30;
+    this.angle += this.moveAngle * Math.PI / 10;
     this.x += this.speed * 5;
-    this.y -= this.speed * 0;
-    if (this.x >= 300) {
+    if (this.x >= 290) {
       this.x -= this.speed * 5;
-      this.y += this.speed * 5;
+      if (this.y <= 200) {
+    
+      }
+
       
     }
   }
@@ -77,12 +79,19 @@ function componentAutomatic(width, height, color, x, y, type) {
     }
   }
   this.newPosOrange = function() {
-    this.angle += this.moveAngle * Math.PI / 30;
+    this.angle += this.moveAngle * Math.PI / 20;
     this.x += this.speed * 5;
-    this.y -= this.speed * 0;
-    if (this.x >= 580) {
+    if(this.x >= 580 ) {
       this.x -= this.speed * 5;
-      
+      this.y += this.speed * 5;
+      if(this.y >= 495) {
+        this.y -= this.speed * 5;
+        this.x += this.speed * 5;
+        if(this.x >= 800) {
+          this.y -= this.speed * 0;
+          this.x -= this.speed * 5;
+        }
+      }
     }
   }
   this.crashWith = function(otherobj) {
