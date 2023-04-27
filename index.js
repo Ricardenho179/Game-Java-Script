@@ -115,11 +115,14 @@ function component(width, height, color, x, y) {
     this.speedX = 0;
     this.speedY = 0;
     this.x = x;
-    this.y = y;    
+    this.y = y;
+    this.deleted = false    
     this.update = function() {
+      if (!this.deleted){
         ctx = myGameArea.context;
         ctx.fillStyle = color;
         ctx.fillRect(this.x, this.y, this.width, this.height);
+      }
     }
     this.newPos = function() {
         this.x += this.speedX;
@@ -134,14 +137,18 @@ function component(width, height, color, x, y) {
       var otherright = otherobj.x + (otherobj.width);
       var othertop = otherobj.y;
       var otherbottom = otherobj.y + (otherobj.height);
-      var crash = true;
       if ((mybottom < othertop) ||
       (mytop > otherbottom) ||
       (myright < otherleft) ||
       (myleft > otherright)) {
-        crash = false;
+        console.log("OI")
+      } else {
+        this.delete()
       }
-      return crash;
+    }
+    this.delete = function() {
+      this.deleted = true
+      ctx.clearRect(this.x, this.y, this.width, this.height)
     }
 }
 
@@ -217,7 +224,7 @@ function updateGameArea() {
     GamePiece2.crashWith(blueObstacle) || GamePiece2.crashWith(redObstacle) || 
     GamePiece2.crashWith(area)) {
       if(GamePiece2.crashWith(area)) {
-        alert("O quadrado verde ganhou, por favor aperte F5");
+        
       }
       alert("O quadrado verde perdeu, por favor aperte F5");
       
@@ -289,10 +296,10 @@ function updateGameArea() {
     //peça verde
     GamePiece2.speedX = 0;
     GamePiece2.speedY = 0;
-    if (myGameArea.keys && myGameArea.keys[65]) {GamePiece2.speedX = -3; }
-    if (myGameArea.keys && myGameArea.keys[68]) {GamePiece2.speedX = 3; }
-    if (myGameArea.keys && myGameArea.keys[87]) {GamePiece2.speedY = -3; }
-    if (myGameArea.keys && myGameArea.keys[83]) {GamePiece2.speedY = 3; }
+    if (myGameArea.keys && myGameArea.keys[65]) {GamePiece2.speedX = -10; }
+    if (myGameArea.keys && myGameArea.keys[68]) {GamePiece2.speedX = 10; }
+    if (myGameArea.keys && myGameArea.keys[87]) {GamePiece2.speedY = -10; }
+    if (myGameArea.keys && myGameArea.keys[83]) {GamePiece2.speedY = 10; }
     GamePiece2.newPos();
     GamePiece2.update();
     //peça roxa
