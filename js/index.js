@@ -99,14 +99,22 @@ function componentAutomatic(width, height, color, x, y, type) {
     var otherright = otherobj.x + (otherobj.width);
     var othertop = otherobj.y;
     var otherbottom = otherobj.y + (otherobj.height);
-    var crash = true;
+    crash = false
     if ((mybottom < othertop) ||
     (mytop > otherbottom) ||
     (myright < otherleft) ||
     (myleft > otherright)) {
-      crash = false;
+      
+    } else if(otherobj == area ) {
+      crash = true
+      return crash 
+    } else {
+      this.delete()
     }
-    return crash;
+  }
+  this.delete = function() {
+    this.deleted = true
+    ctx.clearRect(this.x, this.y, this.width, this.height)
   }
 }
 function component(width, height, color, x, y) {
