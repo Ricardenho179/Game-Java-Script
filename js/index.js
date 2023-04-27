@@ -84,7 +84,7 @@ function componentAutomatic(width, height, color, x, y, type) {
     this.x += this.speed * 5;
     if(this.x >= 580 ) {
       this.x -= this.speed * 5;
-      this.y += this.speed * 5;
+      this.y -= this.speed * 5;
       if(this.y >= 495) {
         this.y -= this.speed * 5;
         this.x += this.speed * 5;
