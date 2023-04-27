@@ -47,15 +47,15 @@ function componentAutomatic(width, height, color, x, y, type) {
   }
   this.newPosBlue = function() {
     this.angle += this.moveAngle * Math.PI / 10;
-    this.x += this.speed * 5;
-    if (this.x >= 290) {
-      this.x -= this.speed * 5;
-      if (this.y <= 200) {
-    
+    this.x += this.speed = 5;
+    if (this.x > 295) {
+      this.x -= this.speed = 5;
+      if (this.y < 170) {
+        this.y += this.speed += 1;
       }
-
-      
     }
+      
+    
   }
   this.newPosRed = function() {
     this.angle += this.moveAngle * Math.PI / 30;
