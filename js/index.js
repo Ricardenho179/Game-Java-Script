@@ -25,7 +25,6 @@ function startGame() {
     redObstacle = new component(1030,10,"red", 0,230);
     area = new component(30, 30,"#11b2223a", 860, 470) 
 }
-
 function componentAutomatic(width, height, color, x, y, type) {
   this.type = type;
   this.width = width;
