@@ -54,7 +54,7 @@ function componentAutomatic(width, height, color, x, y, type) {
         this.x += this.speed + 2;
         if(this.x >= 710){
           this.x += this.speed - 4;
-          this.y += this.speed - 2;
+          this.y += this.speed - 5;
 
         }
       }
@@ -85,9 +85,9 @@ function componentAutomatic(width, height, color, x, y, type) {
     this.angle += this.moveAngle * Math.PI / 30;
     this.x += this.speed * 5;
     this.y -= this.speed * 0;
-    if (this.x >= 400) {
-      this.x = 600;
-      this.y = 600;  
+    if (this.x >= 580) {
+      this.x -= this.speed * 5;
+      
     }
   }
   this.crashWith = function(otherobj) {
