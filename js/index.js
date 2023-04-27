@@ -8,6 +8,7 @@ function startGame() {
     GamePiece5 = new componentAutomatic(15, 15, "red", 37, 220);
     GamePiece6 = new componentAutomatic(15,15,"orange", 37, 270)
     GamePiece3 = new component(15, 15, "purple", 30, 320);
+    GamePieceG = new component(15, 15, "#191970", 1035, 660);
     obstacle  = new component(10, 700, "yellow", 1070, 0);
     obstacle2  = new component(1100, 10, "yellow", 0, 0);
     obstacle3  = new component(1100, 10, "yellow", 0, 690);
@@ -47,12 +48,28 @@ function componentAutomatic(width, height, color, x, y, type) {
   }
   this.newPosBlue = function() {
     this.angle += this.moveAngle * Math.PI / 30;
+<<<<<<< HEAD
     this.x += this.speed * 5;
     this.y -= this.speed * 0;
     if (this.x >= 300) {
       this.x -= this.speed * 5;
       this.y += this.speed * 5;
       
+=======
+    this.x += this.speed + 4;
+    this.y += this.speed = 0;
+    if (this.x >= 295) {
+      this.x += this.speed - 4;
+      this.y += this.speed + 4;
+      if (this.y >= 215) {
+        this.x += this.speed + 4;
+        this.y += this.speed - 4;
+        if (this.x >= 755) {
+          this.x += this.speed = -4;
+          this.y += this.speed = -8;
+        }
+      }
+>>>>>>> 3627dbbe61c7c7efa1470c467f57258f618d3b20
     }
   }
   this.newPosRed = function() {
@@ -311,9 +328,27 @@ function updateGameArea() {
     GamePiece5.newPosRed();
     GamePiece5.update();
     //peça laranja
-    GamePiece6.newPosOrange(GamePiece6);
-    GamePiece6.update()
+    GamePiece6.newPosOrange();
+    GamePiece6.update();
     // GamePiece7.update();
+
+    // Pecinha do guxtavin
+    GamePieceG.speedX = 0;
+    GamePieceG.speedY = 0;
+    // Esquerda
+    if (myGameArea.keys && myGameArea.keys[71]) {
+      GamePieceG.speedX = -7;
+      
+    } 
+    // Direita
+    if (myGameArea.keys && myGameArea.keys[74]) {GamePieceG.speedX = 7;}
+    // Cima
+    if (myGameArea.keys && myGameArea.keys[89]) {GamePieceG.speedY = -7;}
+    // Baixo
+    if (myGameArea.keys && myGameArea.keys[72]) {GamePieceG.speedY = 7;}
+
+    GamePieceG.newPos();
+    GamePieceG.update();
     //OBSTACULOS
     obstacle.update();
     obstacle2.update();
