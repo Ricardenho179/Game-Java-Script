@@ -137,11 +137,15 @@ function component(width, height, color, x, y) {
       var otherright = otherobj.x + (otherobj.width);
       var othertop = otherobj.y;
       var otherbottom = otherobj.y + (otherobj.height);
+      crash = false
       if ((mybottom < othertop) ||
       (mytop > otherbottom) ||
       (myright < otherleft) ||
       (myleft > otherright)) {
-        console.log("OI")
+        
+      } else if(otherobj == area ) {
+        crash = true
+        return crash 
       } else {
         this.delete()
       }
@@ -197,7 +201,6 @@ function updateGameArea() {
         if(myGamePiece.crashWith(area)) {
           alert("O quadrado preto ganhou, por favor aperte F5");
         }
-        alert("O quadrado preto perdeu, por favor aperte F5");
         
         
     } else if (GamePiece1.crashWith(obstacle)|| GamePiece1.crashWith(obstacle2) || 
@@ -213,7 +216,6 @@ function updateGameArea() {
       if(GamePiece1.crashWith(area)) {
         alert("O quadrado cinza ganhou, por favor aperte F5");
       }
-      alert("O quadrado cinza perdeu, por favor aperte F5");
       
     } else if(GamePiece2.crashWith(obstacle) || GamePiece2.crashWith(obstacle2) || 
     GamePiece2.crashWith(obstacle3)|| GamePiece2.crashWith(obstacle4)|| 
@@ -224,9 +226,8 @@ function updateGameArea() {
     GamePiece2.crashWith(blueObstacle) || GamePiece2.crashWith(redObstacle) || 
     GamePiece2.crashWith(area)) {
       if(GamePiece2.crashWith(area)) {
-        
+        alert("O quadrado verde ganhou, por favor aperte F5");
       }
-      alert("O quadrado verde perdeu, por favor aperte F5");
       
     } 
     else if(GamePiece3.crashWith(obstacle)|| GamePiece3.crashWith(obstacle2) || 
@@ -240,7 +241,6 @@ function updateGameArea() {
       if(GamePiece3.crashWith(area)) {
         alert("O quadrado roxo ganhou, por favor aperte F5");
       }
-      alert("O quadrado roxo perdeu, por favor aperte F5");
      
     }
      else if(GamePiece4.crashWith(obstacle) || GamePiece4.crashWith(obstacle2)|| 
@@ -254,7 +254,6 @@ function updateGameArea() {
       if(GamePiece4.crashWith(area)) {
         alert("O quadrado azul ganhou, por favor aperte F5");
       }
-      alert("O quadrado azul perdeu, por favor aperte F5");
       
       
     } else if(GamePiece5.crashWith(obstacle) || GamePiece5.crashWith(obstacle2)|| 
@@ -268,7 +267,6 @@ function updateGameArea() {
       if(GamePiece5.crashWith(area)) {
         alert("O quadrado vermelho ganhou, por favor aperte F5");
       }
-      alert("O quadrado vermelho perdeu, por favor aperte F5");
       
     }
     else if (GamePiece6.crashWith(obstacle)|| GamePiece6.crashWith(obstacle2) || 
@@ -282,7 +280,6 @@ function updateGameArea() {
       if(GamePiece6.crashWith(area)) {
         alert("O quadrado laranja ganhou, por favor aperte F5");
       }
-      alert("O quadrado laranja perdeu, por favor aperte F5");
       
     }
     else {
