@@ -35,29 +35,24 @@ function componentAutomatic(width, height, color, x, y, type) {
   this.x = x;
   this.y = y;    
   this.update = function() {
+    if (!this.deleted){
       ctx = myGameArea.context;
       ctx.save();
       ctx.translate(this.x, this.y);
       ctx.rotate(this.angle);
       ctx.fillStyle = color;
       ctx.fillRect(this.width / -2, this.height / -2, this.width, this.height);        
-      ctx.restore();    
+      ctx.restore();  
+      } 
   }
   this.newPosBlue = function() {
     this.angle += this.moveAngle * Math.PI / 30;
-    this.x += this.speed + 2;
-    if (this.x >= 290) {
-      this.x += this.speed - 4;
-      this.y += this.speed + 2;
-      if (this.y >= 215) {
-        this.y += this.speed - 4;
-        this.x += this.speed + 2;
-        if(this.x >= 710){
-          this.x += this.speed - 4;
-          this.y += this.speed - 5;
-
-        }
-      }
+    this.x += this.speed * 5;
+    this.y -= this.speed * 0;
+    if (this.x >= 300) {
+      this.x -= this.speed * 5;
+      this.y += this.speed * 5;
+      
     }
   }
   this.newPosRed = function() {
