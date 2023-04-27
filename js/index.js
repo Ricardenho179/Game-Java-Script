@@ -243,21 +243,18 @@ function updateGameArea() {
       if(GamePiece3.crashWith(area)) {
         alert("O quadrado roxo ganhou, por favor aperte F5");
       }
-     
     }
-     else if(GamePiece4.crashWith(obstacle) || GamePiece4.crashWith(obstacle2)|| 
-     GamePiece4.crashWith(obstacle3) || GamePiece4.crashWith(obstacle4)|| 
-     GamePiece4.crashWith(obstacle5) || GamePiece4.crashWith(obstacle6) ||
-     GamePiece4.crashWith(obstacle8) || GamePiece4.crashWith(obstacle9) ||
-     GamePiece4.crashWith(greenObstacle) || GamePiece4.crashWith(greyObstacle) ||
-     GamePiece4.crashWith(orangeObstacle) || GamePiece4.crashWith(blackObstacle) ||
-     GamePiece4.crashWith(redObstacle) ||
-     GamePiece4.crashWith(area)) {
+    else if(GamePiece4.crashWith(obstacle) || GamePiece4.crashWith(obstacle2)|| 
+    GamePiece4.crashWith(obstacle3) || GamePiece4.crashWith(obstacle4)|| 
+    GamePiece4.crashWith(obstacle5) || GamePiece4.crashWith(obstacle6) ||
+    GamePiece4.crashWith(obstacle8) || GamePiece4.crashWith(obstacle9) ||
+    GamePiece4.crashWith(greenObstacle) || GamePiece4.crashWith(greyObstacle) ||
+    GamePiece4.crashWith(orangeObstacle) || GamePiece4.crashWith(blackObstacle) ||
+    GamePiece4.crashWith(redObstacle) ||
+    GamePiece4.crashWith(area)) {
       if(GamePiece4.crashWith(area)) {
         alert("O quadrado azul ganhou, por favor aperte F5");
       }
-      
-      
     } else if(GamePiece5.crashWith(obstacle) || GamePiece5.crashWith(obstacle2)|| 
     GamePiece5.crashWith(obstacle3) || GamePiece5.crashWith(obstacle4)||
     GamePiece5.crashWith(obstacle5) || GamePiece5.crashWith(obstacle6) ||
