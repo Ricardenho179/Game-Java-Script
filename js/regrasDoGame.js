@@ -135,12 +135,13 @@ function updateGameArea() {
   //Regras de movimentação da peça verde
   GamePiece2.speedX = 0;
   GamePiece2.speedY = 0;
-  GamePiece2.newPos();
-  GamePiece2.update();
   if (myGameArea.keys && myGameArea.keys[65]) {GamePiece2.speedX = -3;}
   if (myGameArea.keys && myGameArea.keys[68]) {GamePiece2.speedX = 3;}
   if (myGameArea.keys && myGameArea.keys[87]) {GamePiece2.speedY = -3;}
   if (myGameArea.keys && myGameArea.keys[83]) {GamePiece2.speedY = 3;}
+  GamePiece2.newPos();
+  GamePiece2.update();
+  
 
   
 
