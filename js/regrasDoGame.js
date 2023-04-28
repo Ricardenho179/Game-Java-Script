@@ -115,7 +115,7 @@ function updateGameArea() {
     }
   }
 
-  myGameArea.clear();
+  myGameArea.clear()
 
   //Regras de movimentação da peça preta
   myGamePiece.newPos();
@@ -141,9 +141,6 @@ function updateGameArea() {
   if (myGameArea.keys && myGameArea.keys[83]) {GamePiece2.speedY = 3;}
   GamePiece2.newPos();
   GamePiece2.update();
-  
-
-  
 
   //Regras de movimentação do bot azul
   GamePiece4.newPosBlue();
