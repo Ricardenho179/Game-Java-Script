@@ -1,13 +1,14 @@
 canvas {
     border: 1px solid #d3d3d3;
-    background-color: #f1f1f1;
+    background-color: #7f2a9b4f;;
 }
 body{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-flow: column;
-    height: 608px;
+    flex-flow: nowrap;
+    height: 100%;
+    background-color: #b1b1b1b3
 }
 .console {
     display: flex;
@@ -21,7 +22,7 @@ body{
     justify-content: flex-start;
     align-items: center;
     position: absolute;
-    top: 42.9%;
+    top: 32.562%;
     bottom: 20%;
     border: 7px solid black;
     height: 172px;
@@ -36,7 +37,7 @@ body{
     position: absolute;
     height: 191px;
     right: 0%;
-    bottom: 57.5%;
+    bottom: 67.5%;
     border: 7px solid grey;
 }
 .posicionaInformaçõesVerde {
@@ -46,9 +47,9 @@ body{
     justify-content: flex-start;
     align-items: center;
     position: absolute;
-    height: 339px;
+    height: 290px;
     right: 0%;
-    top: 73%;
+    top: 52.7%;
     border: 7px solid green;
 }
 .Texto {
