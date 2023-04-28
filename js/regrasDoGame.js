@@ -125,24 +125,23 @@ function updateGameArea() {
   GamePiece1.newPos();
   GamePiece1.update();
 
-  //Regras de movimentação da peça verde
-  if (myGameArea.keys && myGameArea.keys[65]) {GamePiece2.speedX = -3; }
-  if (myGameArea.keys && myGameArea.keys[68]) {GamePiece2.speedX = 3; }
-  if (myGameArea.keys && myGameArea.keys[87]) {GamePiece2.speedY = -3; }
-  if (myGameArea.keys && myGameArea.keys[83]) {GamePiece2.speedY = 3; }
-
-  GamePiece2.speedX = 0;
-  GamePiece2.speedY = 0;
-  GamePiece2.newPos();
-  GamePiece2.update();
-
-
   //Regras de movimentação da peça roxa
   if (myGameArea.x && myGameArea.y) {
     GamePiece3.x = myGameArea.x;
     GamePiece3.y = myGameArea.y;
   }
   GamePiece3.update();
+
+  //Regras de movimentação da peça verde
+  if (myGameArea.keys && myGameArea.keys[65]) {GamePiece2.speedX = -3;}
+  if (myGameArea.keys && myGameArea.keys[68]) {GamePiece2.speedX = 3;}
+  if (myGameArea.keys && myGameArea.keys[87]) {GamePiece2.speedY = -3;}
+  if (myGameArea.keys && myGameArea.keys[83]) {GamePiece2.speedY = 3;}
+
+  GamePiece2.speedX = 0;
+  GamePiece2.speedY = 0;
+  GamePiece2.newPos();
+  GamePiece2.update();
 
   //Regras de movimentação do bot azul
   GamePiece4.newPosBlue();
