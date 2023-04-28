@@ -1,4 +1,3 @@
-// alert("Descubra as funcionalidades de cada quadrado")
 function startGame() {
     myGameArea.start();
     myGamePiece = new component(15, 15, "black", 30, 120);
