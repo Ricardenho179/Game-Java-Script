@@ -48,29 +48,8 @@ function componentAutomatic(width, height, color, x, y, type) {
   }
   this.newPosBlue = function() {
     this.angle += this.moveAngle * Math.PI / 30;
-<<<<<<< HEAD
-    this.x += this.speed * 5;
-    this.y -= this.speed * 0;
-    if (this.x >= 300) {
-      this.x -= this.speed * 5;
-      this.y += this.speed * 5;
-      
-=======
-    this.x += this.speed + 4;
-    this.y += this.speed = 0;
-    if (this.x >= 295) {
-      this.x += this.speed - 4;
-      this.y += this.speed + 4;
-      if (this.y >= 215) {
-        this.x += this.speed + 4;
-        this.y += this.speed - 4;
-        if (this.x >= 755) {
-          this.x += this.speed = -4;
-          this.y += this.speed = -8;
-        }
-      }
->>>>>>> 3627dbbe61c7c7efa1470c467f57258f618d3b20
-    }
+    this.y += this.speed * 5;
+    
   }
   this.newPosRed = function() {
     this.angle += this.moveAngle * Math.PI / 30;
@@ -398,6 +377,7 @@ function moveRightBlackPiece() {
 function moveRightGreyPiece() {
 GamePiece1.speedX += 1;
 }
+
 //função de parar peça cinza
 function stopMove() {
   GamePiece1.speedX = 0;
