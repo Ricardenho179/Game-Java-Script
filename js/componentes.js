@@ -44,7 +44,7 @@ function componentAutomatic(width, height, color, x, y, type) {
       ctx.fillStyle = color;
       ctx.fillRect(this.width / -2, this.height / -2, this.width, this.height);        
       ctx.restore();  
-      } 
+    } 
   }
   this.newPosBlue = function() {
     this.angle += this.moveAngle * Math.PI / 30;
@@ -152,8 +152,8 @@ function component(width, height, color, x, y) {
     }
   }
   this.newPos = function() {
-      this.x += this.speedX;
-      this.y += this.speedY;
+    this.x += this.speedX;
+    this.y += this.speedY;
   }
   this.crashWith = function(otherobj) {
     var myleft = this.x;
@@ -182,7 +182,6 @@ function component(width, height, color, x, y) {
     // ctx.clearRect(this.x, this.y, this.width, this.height);
     this.x += this.speedX = 100000000000
     this.y += this.speedY = 100000000000
-
   }
 }
 
