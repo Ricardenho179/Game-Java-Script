@@ -119,7 +119,9 @@ function componentAutomatic(width, height, color, x, y, type) {
   }
   this.delete = function() {
     this.deleted = true
-    ctx.clearRect(this.x, this.y, this.width, this.height)
+    // ctx.clearRect(this.x, this.y, this.width, this.height);
+    this.x += this.speedX = 100000000000
+    this.y += this.speedY = 100000000000
   }
 }
 function component(width, height, color, x, y) {
@@ -165,7 +167,10 @@ function component(width, height, color, x, y) {
     }
     this.delete = function() {
       this.deleted = true
-      ctx.clearRect(this.x, this.y, this.width, this.height)
+      // ctx.clearRect(this.x, this.y, this.width, this.height);
+      this.x += this.speedX = 100000000000
+      this.y += this.speedY = 100000000000
+
     }
 }
 
@@ -220,7 +225,7 @@ function updateGameArea() {
     // Regras da peça Cinza
     else if (GamePiece1.crashWith(obstacle)|| GamePiece1.crashWith(obstacle2) || 
       GamePiece1.crashWith(obstacle3)|| GamePiece1.crashWith(obstacle4)|| 
-      GamePiece1.crashWith(obstacle5) || GamePiece1.crashWith(obstacle6) || GamePieceG.crashWith(obstacle7) ||
+      GamePiece1.crashWith(obstacle5) || GamePiece1.crashWith(obstacle6) || GamePiece1.crashWith(obstacle7) ||
       GamePiece1.crashWith(obstacle8) || GamePiece1.crashWith(obstacle9) ||
       GamePiece1.crashWith(greenObstacle) || GamePiece1.crashWith(blackObstacle) ||
       GamePiece1.crashWith(orangeObstacle) || GamePiece1.crashWith(obstacleG) ||
@@ -236,7 +241,7 @@ function updateGameArea() {
     // Regras da peça Verde
     else if(GamePiece2.crashWith(obstacle) || GamePiece2.crashWith(obstacle2) || 
     GamePiece2.crashWith(obstacle3)|| GamePiece2.crashWith(obstacle4)|| 
-    GamePiece2.crashWith(obstacle5) || GamePiece2.crashWith(obstacle6) || GamePieceG.crashWith(obstacle7) ||
+    GamePiece2.crashWith(obstacle5) || GamePiece2.crashWith(obstacle6) || GamePiece2.crashWith(obstacle7) ||
     GamePiece2.crashWith(obstacle8) || GamePiece2.crashWith(obstacle9) ||   
     GamePiece2.crashWith(blackObstacle) || GamePiece2.crashWith(greyObstacle) ||
     GamePiece2.crashWith(orangeObstacle) || GamePiece2.crashWith(obstacleG) ||
@@ -269,7 +274,7 @@ function updateGameArea() {
      GamePiece4.crashWith(greenObstacle) || GamePiece4.crashWith(greyObstacle) ||
      GamePiece4.crashWith(orangeObstacle) || GamePiece4.crashWith(blackObstacle) ||
      GamePiece4.crashWith(redObstacle) || GamePiece4.crashWith(obstacleG) ||
-     GamePieceG.crashWith(obstacle7) ||
+     GamePiece4.crashWith(obstacle7) ||
      GamePiece4.crashWith(area)) {
       if(GamePiece4.crashWith(area)) {
         alert("O quadrado azul ganhou, por favor aperte F5");
@@ -284,7 +289,7 @@ function updateGameArea() {
     GamePiece5.crashWith(greenObstacle) || GamePiece5.crashWith(greyObstacle) ||
     GamePiece5.crashWith(orangeObstacle) || GamePiece5.crashWith(blackObstacle) ||
     GamePiece5.crashWith(blueObstacle) || GamePiece5.crashWith(obstacleG) ||
-    GamePieceG.crashWith(obstacle7) ||
+    GamePiece5.crashWith(obstacle7) ||
     GamePiece5.crashWith(area)) {
       if(GamePiece5.crashWith(area)) {
         alert("O quadrado vermelho ganhou, por favor aperte F5");
@@ -296,7 +301,7 @@ function updateGameArea() {
     GamePiece6.crashWith(obstacle3)|| GamePiece6.crashWith(obstacle4) ||
     GamePiece6.crashWith(obstacle5) || GamePiece6.crashWith(obstacle6) ||
     GamePiece6.crashWith(obstacle8) || GamePiece6.crashWith(obstacle9) ||
-    GamePieceG.crashWith(obstacle7) ||
+    GamePiece6.crashWith(obstacle7) ||
     GamePiece6.crashWith(greenObstacle) || GamePiece6.crashWith(greyObstacle) ||
     GamePiece6.crashWith(blueObstacle) || GamePiece6.crashWith(redObstacle) ||
     GamePiece6.crashWith(blackObstacle) || GamePiece6.crashWith(obstacleG) ||
