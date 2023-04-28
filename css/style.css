@@ -65,6 +65,7 @@ body{
     justify-content: center;
     position: absolute;
     top: -1.9%;
+    flex-flow: column;
 }
 body > div > div > div > button:nth-child(2) {
     width: 86.5px;

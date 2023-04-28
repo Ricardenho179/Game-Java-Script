@@ -24,7 +24,7 @@ function startGame() {
   blueObstacle = new component(10, 180 ,"blue", 110, 50);
   orangeObstacle = new component(210, 10, "orange", 0, 550);
   redObstacle = new component(1030,10,"red", 0,230);
-  area = new component(30, 30, "#11b06a", 860, 470);
+  area = new componentRound(15, "#11b06a", 860, 490);
 }
 function componentAutomatic(width, height, color, x, y, type) {
   this.type = type;
@@ -131,11 +131,45 @@ function componentAutomatic(width, height, color, x, y, type) {
   }
   this.delete = function() {
     this.deleted = true
-    // ctx.clearRect(this.x, this.y, this.width, this.height);
-    this.x += this.speedX = 100000000000
-    this.y += this.speedY = 100000000000
+    ctx.clearRect(this.x, this.y, this.width, this.height);
+    this.x += this.speedX = +100000000000
+    this.y += this.speedY = +100000000000
   }
+  this.crashWithArea = function(otherobjRedondo,otherobjQuadrado) {
+    this.collisionCircleRect(otherobjRedondo,otherobjQuadrado)
+    if(this.collisionCircleRect(otherobjRedondo,otherobjQuadrado)) {
+        crash = true
+        return crash 
+      } 
+    }
+    this.collisionCircleRect = function(otherobjRedondo,otherobjQuadrado) {
+      // calcula a distância entre o centro da circunferência e o centro do retângulo
+      let distX = Math.abs(otherobjRedondo.x - otherobjQuadrado.x - otherobjQuadrado.width / 2);
+      let distY = Math.abs(otherobjRedondo.y - otherobjQuadrado.y - otherobjQuadrado.height / 2);
+  
+      // verifica se a distância é maior que a soma dos raios da circunferência e a metade da largura ou altura do retângulo
+      if (distX > (otherobjQuadrado.width / 2 + otherobjRedondo.radius)) {
+        return false;
+      }
+      if (distY > (otherobjQuadrado.height / 2 + otherobjRedondo.radius)) {
+        return false;
+      }
+  
+      // verifica se a distância é menor que a soma dos raios da circunferência e a metade da largura ou altura do retângulo
+      if (distX <= otherobjQuadrado.width / 2) {
+        return true;
+      }
+      if (distY <= otherobjQuadrado.height / 2) {
+        return true;
+      }
+  
+      // verifica se a distância ao quadrado é menor que a soma dos quadrados dos raios da circunferência
+      let dx = distX - otherobjQuadrado.width / 2;
+      let dy = distY - otherobjQuadrado.height / 2;
+      return (dx*dx+dy*dy<=(otherobjRedondo.radius*otherobjRedondo.radius));
+    }
 }
+
 function component(width, height, color, x, y) {
   this.width = width;
   this.height = height;
@@ -183,9 +217,54 @@ function component(width, height, color, x, y) {
     this.x += this.speedX = 100000000000
     this.y += this.speedY = 100000000000
   }
+  this.crashWithArea = function(otherobjRedondo,otherobjQuadrado) {
+  // this.collisionCircleRect(otherobjRedondo,otherobjQuadrado)
+  if(this.collisionCircleRect(otherobjRedondo,otherobjQuadrado)) {
+      crash = true
+      return crash 
+    } 
+  }
+  this.collisionCircleRect = function(otherobjRedondo,otherobjQuadrado) {
+    // calcula a distância entre o centro da circunferência e o centro do retângulo
+    let distX = Math.abs(otherobjRedondo.x - otherobjQuadrado.x - otherobjQuadrado.width / 2);
+    let distY = Math.abs(otherobjRedondo.y - otherobjQuadrado.y - otherobjQuadrado.height / 2);
+
+    // verifica se a distância é maior que a soma dos raios da circunferência e a metade da largura ou altura do retângulo
+    if (distX > (otherobjQuadrado.width / 2 + otherobjRedondo.radius)) {
+      return false;
+    }
+    if (distY > (otherobjQuadrado.height / 2 + otherobjRedondo.radius)) {
+      return false;
+    }
+
+    // verifica se a distância é menor que a soma dos raios da circunferência e a metade da largura ou altura do retângulo
+    if (distX <= otherobjQuadrado.width / 2) {
+      return true;
+    }
+    if (distY <= otherobjQuadrado.height / 2) {
+      return true;
+    }
+
+    // verifica se a distância ao quadrado é menor que a soma dos quadrados dos raios da circunferência
+    let dx = distX - otherobjQuadrado.width / 2;
+    let dy = distY - otherobjQuadrado.height / 2;
+    return (dx*dx+dy*dy<=(otherobjRedondo.radius*otherobjRedondo.radius));
+  }
 }
 
-
+function componentRound(radius, color, x, y) {
+  this.radius = radius;
+  this.color = color;
+  this.x = x;
+  this.y = y;
+  this.update = function() {
+    ctx = myGameArea.context;
+    ctx.fillStyle = this.color;
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.radius, 0, 2 * Math.PI); // desenha a bola
+    ctx.fill();
+  }
+}
 
 
 

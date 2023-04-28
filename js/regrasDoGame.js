@@ -10,8 +10,8 @@ function updateGameArea() {
     myGamePiece.crashWith(orangeObstacle) || myGamePiece.crashWith(obstacle7) ||
     myGamePiece.crashWith(blueObstacle) || myGamePiece.crashWith(redObstacle) ||
     myGamePiece.crashWith(obstacleG) ||
-    myGamePiece.crashWith(area)) {
-    if(myGamePiece.crashWith(area)) {
+    myGamePiece.crashWithArea(area, myGamePiece)) {
+    if(myGamePiece.crashWithArea(area, myGamePiece)) {
       alert("O quadrado preto ganhou, por favor aperte F5");
     }
   } 
@@ -23,8 +23,8 @@ function updateGameArea() {
     GamePiece1.crashWith(greenObstacle) || GamePiece1.crashWith(blackObstacle) ||
     GamePiece1.crashWith(orangeObstacle) || GamePiece1.crashWith(obstacleG) ||
     GamePiece1.crashWith(blueObstacle) || GamePiece1.crashWith(redObstacle) ||
-    GamePiece1.crashWith(area)) {
-    if(GamePiece1.crashWith(area)) {
+    GamePiece1.crashWithArea(area, GamePiece1)) {
+    if(GamePiece1.crashWithArea(area, GamePiece1)) {
       alert("O quadrado cinza ganhou, por favor aperte F5");
     }
     
@@ -37,8 +37,8 @@ function updateGameArea() {
     GamePiece2.crashWith(blackObstacle) || GamePiece2.crashWith(greyObstacle) ||
     GamePiece2.crashWith(orangeObstacle) || GamePiece2.crashWith(obstacleG) ||
     GamePiece2.crashWith(blueObstacle) || GamePiece2.crashWith(redObstacle) || 
-    GamePiece2.crashWith(area)) {
-    if(GamePiece2.crashWith(area)) {
+    GamePiece2.crashWithArea(area, GamePiece2)) {
+    if(GamePiece2.crashWithArea(area, GamePiece2)) {
       alert("O quadrado verde ganhou, por favor aperte F5");
     }
   }
@@ -52,8 +52,8 @@ function updateGameArea() {
     GamePiece3.crashWith(orangeObstacle) || GamePiece3.crashWith(blackObstacle) ||
     GamePiece3.crashWith(blueObstacle) || GamePiece3.crashWith(redObstacle) ||
     GamePiece3.crashWith(obstacleG) || GamePiece3.crashWith(obstacle7) ||
-    GamePiece3.crashWith(area)) {
-    if(GamePiece3.crashWith(area)) {
+    GamePiece3.crashWithArea(area, GamePiece3)) {
+    if(GamePiece3.crashWithArea(area, GamePiece3)) {
       alert("O quadrado roxo ganhou, por favor aperte F5");
     }
   }
@@ -67,8 +67,8 @@ function updateGameArea() {
     GamePiece4.crashWith(orangeObstacle) || GamePiece4.crashWith(blackObstacle) ||
     GamePiece4.crashWith(redObstacle) || GamePiece4.crashWith(obstacleG) ||
     GamePiece4.crashWith(obstacle7) ||
-    GamePiece4.crashWith(area)) {
-    if(GamePiece4.crashWith(area)) {
+    GamePiece4.crashWithArea(area, GamePiece4)) {
+    if(GamePiece4.crashWithArea(area, GamePiece4)) {
       alert("O quadrado azul ganhou, por favor aperte F5");
     }
   } 
@@ -81,8 +81,8 @@ function updateGameArea() {
     GamePiece5.crashWith(orangeObstacle) || GamePiece5.crashWith(blackObstacle) ||
     GamePiece5.crashWith(blueObstacle) || GamePiece5.crashWith(obstacleG) ||
     GamePiece5.crashWith(obstacle7) ||
-    GamePiece5.crashWith(area)) {
-    if(GamePiece5.crashWith(area)) {
+    GamePiece5.crashWithArea(area, GamePiece5)) {
+    if(GamePiece5.crashWithArea(area, GamePiece5)) {
       alert("O quadrado vermelho ganhou, por favor aperte F5");
     }
   } 
@@ -95,8 +95,8 @@ function updateGameArea() {
     GamePiece6.crashWith(greenObstacle) || GamePiece6.crashWith(greyObstacle) ||
     GamePiece6.crashWith(blueObstacle) || GamePiece6.crashWith(redObstacle) ||
     GamePiece6.crashWith(blackObstacle) || GamePiece6.crashWith(obstacleG) ||
-    GamePiece6.crashWith(area)) {
-    if(GamePiece6.crashWith(area)) {
+    GamePiece6.crashWithArea(area, GamePiece6)) {
+    if(GamePiece6.crashWithArea(area, GamePiece6)) {
       alert("O quadrado laranja ganhou, por favor aperte F5");
     }
   }
@@ -108,8 +108,8 @@ function updateGameArea() {
     GamePieceG.crashWith(greenObstacle) || GamePieceG.crashWith(greyObstacle) ||
     GamePieceG.crashWith(blueObstacle) || GamePieceG.crashWith(redObstacle) ||
     GamePieceG.crashWith(blackObstacle) || GamePieceG.crashWith(obstacle7) ||
-    GamePieceG.crashWith(area)) {
-    if(GamePieceG.crashWith(area)) {
+    GamePieceG.crashWithArea(area, GamePieceG)) {
+    if(GamePieceG.crashWithArea(area, GamePieceG)) {
       alert("GG, o guxtavo venceu! JG diff");
     }
   }
@@ -205,7 +205,7 @@ function updateGameArea() {
   blackObstacle.update();
   greenObstacle.update();
   orangeObstacle.update();
-  
+
   //AREA DE VITÓRIA
   area.update();
 }
