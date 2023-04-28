@@ -1,13 +1,13 @@
 // alert("Descubra as funcionalidades de cada quadrado")
 function startGame() {
     myGameArea.start();
+    myGamePiece = new component(15, 15, "black", 30, 120);
     GamePiece1 = new component(15, 15, "grey", 30, 20);
     GamePiece2 = new component(15, 15, "green", 30, 70);    
-    myGamePiece = new component(15, 15, "black", 30, 120);
+    GamePiece3 = new component(15, 15, "purple", 30, 320);
     GamePiece4 = new componentAutomatic(15, 15, "blue",37, 170);
     GamePiece5 = new componentAutomatic(15, 15, "red", 37, 220);
     GamePiece6 = new componentAutomatic(15,15,"orange", 37, 270)
-    GamePiece3 = new component(15, 15, "purple", 30, 320);
     GamePieceG = new component(15, 15, "#191970", 1035, 660);
     obstacle  = new component(10, 700, "yellow", 1070, 0);
     obstacle2  = new component(1100, 10, "yellow", 0, 0);
