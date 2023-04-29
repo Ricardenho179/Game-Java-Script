@@ -6,7 +6,8 @@ function startGame() {
   GamePiece3 = new component(15, 15, "purple", 30, 320);
   GamePiece4 = new componentAutomatic(15, 15, "blue",37, 170);
   GamePiece5 = new componentAutomatic(15, 15, "red", 37, 220);
-  GamePiece6 = new componentAutomatic(15,15,"orange", 37, 270)
+  GamePiece6 = new componentAutomatic(15,15,"orange", 37, 270);
+  GamePiece7 = new component(15, 15, "#b0fb84", 30, 45);
   GamePieceG = new component(15, 15, "#191970", 1035, 660);
   GamePieceS = new component(15, 15, "#9042df", 30, )
   obstacle  = new component(10, 700, "yellow", 1070, 0);
@@ -18,14 +19,15 @@ function startGame() {
   obstacle7 = new component(300, 10, "yellow", 600, 400);
   obstacle8 = new component(620, 10, "yellow", 250, 550);
   obstacle9 = new component(400, 10, "yellow", 500, 510);
+  obstacle10 = new component(400, 10, "#b0fb84", 370, 35.5);
   obstacleG = new component(150, 10, "#191970", 870, 550);
-
-  blackObstacle = new component(10,200, "black", 310,0);
+  blackObstacle = new component(10, 175, "black", 310,10);
   greyObstacle = new component(10, 430, "grey", 770,35);
-  greenObstacle = new component(570, 10, "green", 0,400);
-  blueObstacle = new component(10, 180 ,"blue", 110, 50);
-  orangeObstacle = new component(210, 10, "orange", 0, 550);
-  redObstacle = new component(1030,10,"red", 0,230);
+  greenObstacle = new component(550, 10, "green", 10,400);
+  blueObstacle = new component(10, 180 ,"blue", 130, 50);
+  orangeObstacle = new component(200, 10, "orange", 10, 550);
+  redObstacle = new component(1000,10,"red", 10,230);
+  
   area = new componentRound(15, "#11b06a", 860, 490);
 }
 function componentAutomatic(width, height, color, x, y, type) {

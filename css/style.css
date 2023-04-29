@@ -4,6 +4,11 @@ canvas {
     border: 1px solid #d3d3d3;
     background-color: #7f2a9b4f;;
 }
+#idCanvas{
+    position: absolute;
+    left: 20%;
+    top: 15%;
+}
 body{
     display: flex;
     align-items: center;
@@ -56,11 +61,6 @@ body{
 }
 .Texto {
     text-align: center;
-}
-#idCanvas{
-    position: absolute;
-    left: 2%;
-    top: 11%;
 }
 .posicionador {
     display: flex;
