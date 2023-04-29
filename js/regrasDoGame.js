@@ -44,19 +44,19 @@ function updateGameArea() {
   }
 
   // Regra de colisão da peça roxa
-  else if(GamePiece3.crashWith(obstacle)|| GamePiece3.crashWith(obstacle2) || 
-    GamePiece3.crashWith(obstacle3)|| GamePiece3.crashWith(obstacle4) || 
-    GamePiece3.crashWith(obstacle5) || GamePiece3.crashWith(obstacle6) ||
-    GamePiece3.crashWith(obstacle8) || GamePiece3.crashWith(obstacle9) ||
-    GamePiece3.crashWith(greenObstacle) || GamePiece3.crashWith(greyObstacle) ||
-    GamePiece3.crashWith(orangeObstacle) || GamePiece3.crashWith(blackObstacle) ||
-    GamePiece3.crashWith(blueObstacle) || GamePiece3.crashWith(redObstacle) ||
-    GamePiece3.crashWith(obstacleG) || GamePiece3.crashWith(obstacle7) ||
-    GamePiece3.crashWithArea(area, GamePiece3)) {
-    if(GamePiece3.crashWithArea(area, GamePiece3)) {
-      alert("O quadrado roxo ganhou, por favor aperte F5");
-    }
-  }
+  // else if(GamePiece3.crashWith(obstacle)|| GamePiece3.crashWith(obstacle2) || 
+  //   GamePiece3.crashWith(obstacle3)|| GamePiece3.crashWith(obstacle4) || 
+  //   GamePiece3.crashWith(obstacle5) || GamePiece3.crashWith(obstacle6) ||
+  //   GamePiece3.crashWith(obstacle8) || GamePiece3.crashWith(obstacle9) ||
+  //   GamePiece3.crashWith(greenObstacle) || GamePiece3.crashWith(greyObstacle) ||
+  //   GamePiece3.crashWith(orangeObstacle) || GamePiece3.crashWith(blackObstacle) ||
+  //   GamePiece3.crashWith(blueObstacle) || GamePiece3.crashWith(redObstacle) ||
+  //   GamePiece3.crashWith(obstacleG) || GamePiece3.crashWith(obstacle7) ||
+  //   GamePiece3.crashWithArea(area, GamePiece3)) {
+  //   if(GamePiece3.crashWithArea(area, GamePiece3)) {
+  //     alert("O quadrado roxo ganhou, por favor aperte F5");
+  //   }
+  // }
 
   // Regra de colisão do bot azul
   else if(GamePiece4.crashWith(obstacle) || GamePiece4.crashWith(obstacle2)|| 

@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/wooden-alphabet-personal-use');
+
 canvas {
     border: 1px solid #d3d3d3;
     background-color: #7f2a9b4f;;
@@ -64,6 +66,7 @@ body{
     display: flex;
     justify-content: center;
     position: absolute;
+    align-items: center;
     top: -1.9%;
     flex-flow: column;
 }
@@ -86,3 +89,14 @@ body > div > div > div > button:nth-child(2) {
     height: 1px;
     position: absolute;
   } */
+
+  body > div.posicionador > text {
+    font-family: fantasy;
+  }
+  body > div.posicionador > h1 {
+    font-family: 'Wooden Alphabet Personal Use', sans-serif;
+    font-size: 50px;
+    margin: 0;
+    margin-top: 12px;
+    color: #911818;
+  }
