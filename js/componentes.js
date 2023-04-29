@@ -23,7 +23,7 @@ function startGame() {
   blackObstacle = new component(10, 175, "black", 300,10);
   greyObstacle = new component(10, 430, "grey", 770,35);
   greenObstacle = new component(550, 10, "green", 10,400);
-  blueObstacle = new component(10, 180 ,"blue", 100, 50);
+  blueObstacle = new component(10, 180 ,"blue", 130, 50);
   orangeObstacle = new component(200, 10, "orange", 10, 550);
   redObstacle = new component(1000,10,"red", 10,230);
   
