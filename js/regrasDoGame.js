@@ -27,8 +27,8 @@ function updateGameArea() {
     if(GamePiece1.crashWithArea(area, GamePiece1)) {
       alert("O quadrado cinza ganhou, por favor aperte F5");
     }
-    
-  } 
+  }
+
   // Regra de colisão da peça verde
   else if(GamePiece2.crashWith(obstacle) || GamePiece2.crashWith(obstacle2) || 
     GamePiece2.crashWith(obstacle3)|| GamePiece2.crashWith(obstacle4)|| 
@@ -71,7 +71,8 @@ function updateGameArea() {
     if(GamePiece4.crashWithArea(area, GamePiece4)) {
       alert("O quadrado azul ganhou, por favor aperte F5");
     }
-  } 
+  }
+
   // Regra de colisão do bot vermelho
   else if(GamePiece5.crashWith(obstacle) || GamePiece5.crashWith(obstacle2)|| 
     GamePiece5.crashWith(obstacle3) || GamePiece5.crashWith(obstacle4)||
@@ -85,7 +86,8 @@ function updateGameArea() {
     if(GamePiece5.crashWithArea(area, GamePiece5)) {
       alert("O quadrado vermelho ganhou, por favor aperte F5");
     }
-  } 
+  }
+
   // Regra de colisão do bot laranja
   else if (GamePiece6.crashWith(obstacle)|| GamePiece6.crashWith(obstacle2) || 
     GamePiece6.crashWith(obstacle3)|| GamePiece6.crashWith(obstacle4) ||
@@ -100,6 +102,7 @@ function updateGameArea() {
       alert("O quadrado laranja ganhou, por favor aperte F5");
     }
   }
+
   // Regra de colisão da peça do Guxtavin
   else if (GamePieceG.crashWith(obstacle)|| GamePieceG.crashWith(obstacle2) || 
     GamePieceG.crashWith(obstacle3)|| GamePieceG.crashWith(obstacle4) ||
@@ -113,7 +116,18 @@ function updateGameArea() {
       alert("GG, o guxtavo venceu! JG diff");
     }
   }
-
+  else if (GamePiece7.crashWith(obstacle) || GamePiece7.crashWith(obstacle2) ||
+    GamePiece7.crashWith(obstacle3) || GamePiece7.crashWith(obstacle4) ||
+    GamePiece7.crashWith(obstacle5) || GamePiece7.crashWith(obstacle6) ||
+    GamePiece7.crashWith(obstacle7) || GamePiece7.crashWith(obstacle8) ||
+    GamePiece7.crashWith(obstacle9)  || GamePiece7.crashWith(greenObstacle) ||
+    GamePiece7.crashWith(greyObstacle) || GamePiece7.crashWith(blueObstacle) || 
+    GamePiece7.crashWith(redObstacle) || GamePiece7.crashWith(blackObstacle) ||
+    GamePiece7.crashWith(obstacleG) || GamePiece7.crashWithArea(area, GamePiece7)) {
+      if (GamePiece7.crashWithArea(area, GamePiece7)) {
+        alert("O satu é o melhor")
+      }
+    }
   myGameArea.clear()
 
   //Regras de movimentação da peça preta
@@ -152,6 +166,19 @@ function updateGameArea() {
   //Regras de movimentação do bot laranja
   GamePiece6.newPosOrange();
   GamePiece6.update();
+
+
+  //Regras de movimentação da peça do Jonatas
+
+  GamePiece7.speedX = 0;
+  GamePiece7.speedY = 0;
+  if (myGameArea.keys && myGameArea.keys[37]) {GamePiece7.speedX = -5;}
+  if (myGameArea.keys && myGameArea.keys[39]) {GamePiece7.speedX = 5;}
+  if (myGameArea.keys && myGameArea.keys[38]) {GamePiece7.speedY = -5;}
+  if (myGameArea.keys && myGameArea.keys[40]) {GamePiece7.speedY = 5;}
+  if (myGameArea.keys && myGameArea.keys[16]) {GamePiece7.x = 863, Gamepiece7.y = 700}
+  GamePiece7.newPos();
+  GamePiece7.update();
 
   //Regras de movimentação da peça do Guxtavin
   GamePieceG.speedX = 0;
@@ -198,6 +225,7 @@ function updateGameArea() {
   obstacle7.update();
   obstacle8.update();
   obstacle9.update();
+  obstacle10.update();
   obstacleG.update();
   blueObstacle.update();
   redObstacle.update();
@@ -205,6 +233,7 @@ function updateGameArea() {
   blackObstacle.update();
   greenObstacle.update();
   orangeObstacle.update();
+  obstacle10.update();
 
   //AREA DE VITÓRIA
   area.update();
