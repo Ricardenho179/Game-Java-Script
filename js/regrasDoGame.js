@@ -176,7 +176,7 @@ function updateGameArea() {
   if (myGameArea.keys && myGameArea.keys[39]) {GamePiece7.speedX = 5;}
   if (myGameArea.keys && myGameArea.keys[38]) {GamePiece7.speedY = -5;}
   if (myGameArea.keys && myGameArea.keys[40]) {GamePiece7.speedY = 5;}
-  if (myGameArea.keys && myGameArea.keys[16]) {GamePiece7.x = 863, Gamepiece7.y = 700}
+  if (myGameArea.keys && myGameArea.keys[16]) {GamePiece7.y = 250}
   GamePiece7.newPos();
   GamePiece7.update();
 
