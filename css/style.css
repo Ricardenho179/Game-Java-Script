@@ -6,8 +6,8 @@ canvas {
 }
 #idCanvas{
     position: absolute;
-    left: 20%;
-    top: 15%;
+    left: 3%;
+    top: 12%;
 }
 body{
     display: flex;
@@ -90,8 +90,9 @@ body > div > div > div > button:nth-child(2) {
     position: absolute;
   } */
 
-  body > div.posicionador > text {
+  body > div.posicionador > p {
     font-family: fantasy;
+    margin: 0;
   }
   body > div.posicionador > h1 {
     font-family: 'Wooden Alphabet Personal Use', sans-serif;
