@@ -266,7 +266,7 @@ function updateGameArea() {
   blackObstacle.update();
   greenObstacle.update();
   orangeObstacle.update();
-  obstacle10.update();
+  purpleObstacle.update();
 
   //AREA DE VITÓRIA
   area.update();

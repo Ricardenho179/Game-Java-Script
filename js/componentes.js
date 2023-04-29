@@ -28,6 +28,7 @@ function startGame() {
   blueObstacle = new component(10, 180 ,"blue", 110, 50);
   orangeObstacle = new component(200, 10, "orange", 10, 550);
   redObstacle = new component(1000,10,"red", 10,230);
+  purpleObstacle = new component(10, 75, "purple", 230, 360)
   
   area = new componentRound(15, "#11b06a", 860, 490);
 }
