@@ -76,12 +76,11 @@ function updateGameArea() {
   // Regra de colisão do bot vermelho
   else if(GamePiece5.crashWith(obstacle) || GamePiece5.crashWith(obstacle2)|| 
     GamePiece5.crashWith(obstacle3) || GamePiece5.crashWith(obstacle4)||
-    GamePiece5.crashWith(obstacle5) || GamePiece5.crashWith(obstacle6) ||
+    GamePiece5.crashWith(obstacle5) || GamePiece5.crashWith(obstacle6) || GamePiece5.crashWith(obstacle7) ||
     GamePiece5.crashWith(obstacle8) || GamePiece5.crashWith(obstacle9) || GamePiece5.crashWith(obstacle10) ||
-    GamePiece5.crashWith(greenObstacle) || GamePiece5.crashWith(greyObstacle) ||
+    GamePiece5.crashWith(greenObstacle) || GamePiece5.crashWith(greyObstacle) || 
     GamePiece5.crashWith(orangeObstacle) || GamePiece5.crashWith(blackObstacle) ||
     GamePiece5.crashWith(blueObstacle) || GamePiece5.crashWith(obstacleG) || GamePiece5.crashWith(obstacleS) ||
-    GamePiece5.crashWith(obstacle7) ||
     GamePiece5.crashWithArea(area, GamePiece5)) {
     if(GamePiece5.crashWithArea(area, GamePiece5)) {
       alert("O quadrado vermelho ganhou, por favor aperte F5");
@@ -109,7 +108,7 @@ function updateGameArea() {
     GamePieceG.crashWith(obstacle5) || GamePieceG.crashWith(obstacle6) ||
     GamePieceG.crashWith(obstacle8) || GamePieceG.crashWith(obstacle9) ||
     GamePieceG.crashWith(greenObstacle) || GamePieceG.crashWith(greyObstacle) ||
-    GamePieceG.crashWith(blueObstacle) || GamePieceG.crashWith(redObstacle) ||
+    GamePieceG.crashWith(blueObstacle) || GamePieceG.crashWith(redObstacle) || GamePieceG.crashWith(orangeObstacle) ||
     GamePieceG.crashWith(blackObstacle) || GamePieceG.crashWith(obstacle7) || GamePieceG.crashWith(obstacleS) ||
     GamePieceG.crashWithArea(area, GamePieceG)) {
     if(GamePieceG.crashWithArea(area, GamePieceG)) {
@@ -123,7 +122,7 @@ function updateGameArea() {
     GamePiece7.crashWith(obstacle5) || GamePiece7.crashWith(obstacle6) ||
     GamePiece7.crashWith(obstacle7) || GamePiece7.crashWith(obstacle8) ||
     GamePiece7.crashWith(obstacle9)  || GamePiece7.crashWith(greenObstacle) ||
-    GamePiece7.crashWith(greyObstacle) || GamePiece7.crashWith(blueObstacle) || 
+    GamePiece7.crashWith(greyObstacle) || GamePiece7.crashWith(blueObstacle) || GamePiece7.crashWith(orangeObstacle) ||
     GamePiece7.crashWith(redObstacle) || GamePiece7.crashWith(blackObstacle) || GamePiece7.crashWith(obstacleS) ||
     GamePiece7.crashWith(obstacleG) || 
     GamePiece7.crashWithArea(area, GamePiece7)) {
@@ -139,11 +138,11 @@ function updateGameArea() {
   GamePieceS.crashWith(obstacle7) || GamePieceS.crashWith(obstacle8) ||
   GamePieceS.crashWith(obstacle9)  || GamePieceS.crashWith(obstacle10) ||
   GamePieceS.crashWith(greyObstacle) || GamePieceS.crashWith(blueObstacle) || 
-  GamePieceS.crashWith(redObstacle) || GamePieceS.crashWith(blackObstacle) ||
+  GamePieceS.crashWith(redObstacle) || GamePieceS.crashWith(blackObstacle) || GamePieceS.crashWith(orangeObstacle) ||
   GamePieceS.crashWith(obstacleG) || GamePieceS.crashWith(greenObstacle) ||
   GamePieceS.crashWithArea(area, GamePieceS)) {
   if (GamePieceS.crashWithArea(area, GamePieceS)) {
-    alert("")
+    alert("Você foi jantado! kkk")
   }
 }
 

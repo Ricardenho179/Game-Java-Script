@@ -101,3 +101,8 @@ body > div > div > div > button:nth-child(2) {
     margin-top: 12px;
     color: #911818;
   }
+  body > div.observação {
+    position: absolute;
+    top: 87%;
+    left: 16%;
+  }
