@@ -3,18 +3,23 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="stylesheet" href="./css/style.css">
+<link href="https://fonts.cdnfonts.com/css/wooden-alphabet-personal-use" rel="stylesheet">
 </head>
 
-<body onload="startGame()">
-    <script src="./js/variavelGlobal.js"></script>
-    <script src="./js/componentes.js"></script>
-    <script src="./js/regrasDoGame.js"></script>
-    <script src="./js/controles.js"></script>
+<body onload="startGame()">   
+
     <div class="posicionador">
         <h1>Labirinto</h1>
+        <p>
+            Escolha uma das pecinhas e tente chegar na bolinha verde<br>
+            Isso se conseguir das peças automáticas kkk Boa sorte
+        </p>
     </div>
-   
-
+    <div class="observação">
+        <p>
+            Caso o jogo fique todo bugado por favor afaste o zoom até ficar agradável para vc =)
+        </p>
+    </div>
     <div class="posicionaControlePreto">
         <div class="Texto">
             <p><b>Controle o quadrado preto</b></p>
@@ -52,5 +57,10 @@
             <p>[37(esquerda), 39(direita), 38(Cima), 40(Baixo)] caso entrar no if manda se mover</p>
         </div>
     </div>
+
+    <script src="./js/variavelGlobal.js"></script>
+    <script src="./js/componentes.js"></script>
+    <script src="./js/regrasDoGame.js"></script>
+    <script src="./js/controles.js"></script>
 </body>
 </html>

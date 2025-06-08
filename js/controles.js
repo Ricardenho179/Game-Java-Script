@@ -16,7 +16,7 @@ function moveupBlackPiece() {
   function moveLeftBlackPiece() {
     myGamePiece.speedX -= 1;
   }
-   function moveLeftGreyPiece() {
+  function moveLeftGreyPiece() {
     GamePiece1.speedX -= 1;
   }
   //Direita
